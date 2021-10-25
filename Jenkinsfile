@@ -8,8 +8,10 @@ pipeline {
             }  
         } 
         stage("Unit test"){
-            sh "python test.py"
-            echo "Testing done"
+            steps {
+                sh "python test.py"
+                echo "Testing done"
+            }
         }
     }
 }
