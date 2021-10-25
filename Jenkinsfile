@@ -2,11 +2,11 @@ pipeline {
     agent any
     stages {
         stage("Run") {
-            sh "python3 main.py"
+            sh "python main.py"
             echo "Running done"   
         } 
         stage("Unit test"){
-            sh "python3 test.py"
+            sh "python test.py"
             echo "Testing done"
         }
     }
